@@ -1,0 +1,245 @@
+# ======================================================================================================================
+# Project - gitignore                                   https://www.toptal.com/developers/gitignore/api/symfony,phpstorm
+# ======================================================================================================================
+
+# >>>> Python
+./.venv
+./venv
+./var
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - app
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> asset-mapper
+app/assets/styles/app.tailwind.css
+app/assets/vendor
+app/bin/tailwindcss-linux-x64
+
+# >>>> app/config
+app/config/secrets/prod/prod.decrypt.private.php
+app/config/jwt/*.pem
+
+# >>>> app/migrations
+app/migrations
+
+# >>>> app/node_modules
+app/node_modules
+
+# >>>> app/public
+app/public/assets
+app/public/build
+app/public/bundles
+app/public/download
+app/public/var
+app/public/[0-9]
+app/public/*.meta
+app/public/*.meta.json
+app/symfony.lock
+
+# >>>> app/tests
+app/tests
+
+# >>>> app/var
+app/var
+
+# >>>> app/vendor
+app/vendor
+
+# >>>> app/.env.*
+app/.env.*
+app/.env.*.*
+
+# >>>> app/composer
+app/composer.phar
+app/composer.lock
+
+# >>>> app/package
+app/package.tar
+app/package.json
+app/package-lock.json
+
+# >>>> app/node_modules
+app/npm-debug.log
+app/yarn-error.log
+
+# >>>> app/phpunit.*
+app/phpunit.xml
+app/.phpunit
+app/.phpunit.result.cache
+
+# >>>> app/phpstan
+app/phpstan.dist.neon
+
+# >>>> app/php-cs-fixer/shim
+app/.php-cs-fixer.php
+app/.php-cs-fixer.cache
+
+# >>>> app/PHP - phing
+app/phing-latest.phar
+
+# >>>> app/*.log
+app/*.log
+
+# >>>> app/*.json
+app/webpack-stats.json
+
+# >>>> app/performance
+app/[0-9]
+app/*.meta
+app/*.meta.json
+
+# >>>> app/local web server
+app/.symfony.local.yaml
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - diagram
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> Draw.io
+.*.drawio.dtmp
+.$*.drawio.bkp
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - scripts
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> PHP - Local ENV files
+./.env.local
+./.env.local.php
+#./.env.*.local
+
+# >>>> PHP - Composer
+./composer.phar
+./composer.lock
+
+# >>>> PHP - Package
+./package.tar
+./package.json
+./package-lock.json
+
+# >>>> PHP - node_modules
+npm-debug.log
+yarn-error.log
+
+# >>>> PHP - phing-latest.phar
+./phing-latest.phar
+./tools/ide/phing-latest.phar
+
+# >>>> PHP - PHP-CS-Fixer
+./.php-cs-fixer.php
+./.php-cs-fixer.cache
+./.php-cs-fixer.dist.php
+
+# >>>> PHP - PHPUnit
+./tests/.phpunit.result.cache
+.phpunit.result.cache
+/phpunit.xml
+
+# >>>> PHP - vendor
+./vendor
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - tools
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> Docker - Desktop                                                  https://www.docker.com/products/docker-desktop/
+./docker-compose.env
+./docker-compose.yml
+./docker-compose.*.env
+./docker-compose.*.yml
+./Dockerfile
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - tools - IDE - PhpStorm
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> IDE - PhpStorm                                                                https://www.jetbrains.com/phpstorm/
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# Cache file creation bug
+# See https://youtrack.jetbrains.com/issue/JBR-2257
+.idea/$CACHE_FILE$
+
+# Generated files
+.idea/**/contentModel.xml
+
+# Sensitive or high-churn files
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dbnavigator.xml
+
+# Editor-based Rest Client
+.idea/httpRequests
+
+# Gradle
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# >>>> IDE - PhpStorm - Plugin
+
+# AWS User-specific
+.idea/**/aws.xml
+
+# Azure Toolkit for IntelliJ plugin
+# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
+.idea/**/azureSettings.xml
+
+# Mongo Explorer plugin
+.idea/**/mongoSettings.xml
+
+# mpeltonen/sbt-idea plugin
+.idea_modules
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# SonarLint plugin
+.idea/sonarlint
+
+# Sonarlint plugin
+# https://plugins.jetbrains.com/plugin/7973-sonarlint
+.idea/**/sonarlint
+
+# SonarQube Plugin
+# https://plugins.jetbrains.com/plugin/7238-sonarqube-community-plugin
+.idea/**/sonarIssues.xml
+
+# Markdown Navigator plugin
+# https://plugins.jetbrains.com/plugin/7896-markdown-navigator-enhanced
+.idea/**/markdown-navigator.xml
+.idea/**/markdown-navigator-enh.xml
+.idea/**/markdown-navigator
+
+# CodeStream plugin
+# https://plugins.jetbrains.com/plugin/12206-codestream
+.idea/codestream.xml
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Directory - tools - IDE - VSCode
+# ----------------------------------------------------------------------------------------------------------------------
+
+# >>>> IDE - Visual Studio Code                                                            https://code.visualstudio.com
+
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history
+.ionide
+
+# Built Visual Studio Code Extensions
+*.vsix

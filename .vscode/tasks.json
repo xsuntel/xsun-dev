@@ -1,0 +1,267 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // -------------------------------------------------------------------------------
+    // Architecture
+    // -------------------------------------------------------------------------------
+
+    // >>>> App
+    {
+      "label": "App - Console - Asset Mapper",
+      "type": "shell",
+      "command": "./scripts/console/app/symfony/asset-map.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    // >>>> Cache
+    {
+      "label": "App - Console - Cache",
+      "type": "shell",
+      "command": "./scripts/console/app/symfony/cache.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "App - Console - Debug",
+      "type": "shell",
+      "command": "./scripts/console/app/symfony/debug.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "App - Console - Scheduler",
+      "type": "shell",
+      "command": "./scripts/console/app/symfony/scheduler.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    // >>>> Database
+    {
+      "label": "App - Console - Migrations",
+      "type": "shell",
+      "command": "./scripts/console/app/symfony/migrations.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    // -------------------------------------------------------------------------------
+    // CDN ( Content Delivery Networks )
+    // -------------------------------------------------------------------------------
+
+    // >>>> AWS (Amazon Web Services)
+
+    // >>>> GCP (Google Cloud Platform)
+
+    // >>>> NCloud (Naver Cloud Platform)
+
+    // -------------------------------------------------------------------------------
+    // Docker - Containers
+    // -------------------------------------------------------------------------------
+
+    // >>>> Dev Environment
+    {
+      "label": "Docker - Container - App - Test",
+      "type": "shell",
+      "command": "./scripts/containers/prod/test.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    // -------------------------------------------------------------------------------
+    // Providers ( Cloud Service Provider )
+    // -------------------------------------------------------------------------------
+
+    // >>>> AWS (Amazon Web Services)
+    //{
+    //    "label": "Provider - AWS - Deploy",
+    //    "type": "shell",
+    //    "command": "./scripts/deploy/prod/aws/elasticbeanstalk/deploy.sh",
+    //    "group": "build",
+    //    "presentation": {
+    //        "reveal": "always",
+    //        "panel": "new"
+    //    }
+    //},
+
+    // >>>> GCP (Google Cloud Platform)
+    //{
+    //    "label": "Provider - GCP - Deploy",
+    //    "type": "shell",
+    //    "command": "./scripts/deploy/prod/gcp/cloud_run/deploy.sh",
+    //    "group": "build",
+    //    "presentation": {
+    //        "reveal": "always",
+    //        "panel": "new"
+    //    }
+    //},
+
+    // >>>> NCloud (Naver Cloud Platform)
+    //{
+    //    "label": "Provider - NCloud - Deploy",
+    //    "type": "shell",
+    //    "command": "./scripts/deploy/prod/ncloud/compute/ubuntu/deploy.sh",
+    //    "group": "build",
+    //    "presentation": {
+    //        "reveal": "always",
+    //        "panel": "new"
+    //    }
+    //},
+
+    // -------------------------------------------------------------------------------
+    // Utility
+    // -------------------------------------------------------------------------------
+
+    // >>>> Git
+    {
+      "label": "Utility - Git - Start working",
+      "type": "shell",
+      "command": "./scripts/console/utility/git/start.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Utility - Git - Stop working",
+      "type": "shell",
+      "command": "./scripts/console/utility/git/stop.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Utility - Git - Localhost - Clear",
+      "type": "shell",
+      "command": "./scripts/console/utility/git/localhost/clear.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Utility - Git - Localhost - Delete",
+      "type": "shell",
+      "command": "./scripts/console/utility/git/localhost/delete.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    // -------------------------------------------------------------------------------
+    // Tools
+    // -------------------------------------------------------------------------------
+
+    // -------------------------------------------------------------------------------
+    // VM ( Instance )
+    // -------------------------------------------------------------------------------
+
+    // >>>> Linux
+    {
+      "label": "VM - Linux - Deploy",
+      "type": "shell",
+      "command": "./scripts/deploy/dev/linux/ubuntu/deploy.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    //{
+    //  "label": "VM - Linux - Status",
+    //  "type": "shell",
+    //  "command": "./scripts/deploy/dev/linux/ubuntu/status.sh",
+    //  "group": "build",
+    //  "presentation": {
+    //    "reveal": "always",
+    //    "panel": "new"
+    //  }
+    //},
+
+    // >>>> MacOS
+    {
+      "label": "VM - MacOS - Deploy",
+      "type": "shell",
+      "command": "./scripts/deploy/dev/macos/device/deploy.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    //{
+    //  "label": "VM - MacOS - Status",
+    //  "type": "shell",
+    //  "command": "./scripts/deploy/dev/macos/device/status.sh",
+    //  "group": "build",
+    //  "presentation": {
+    //    "reveal": "always",
+    //    "panel": "new"
+    //  }
+    //},
+
+    // >>>> Windows
+    {
+      "label": "VM - Windows - Deploy",
+      "type": "shell",
+      "command": "./scripts/deploy/dev/windows/device/deploy.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+
+    //{
+    //  "label": "VM - Windows - Status",
+    //  "type": "shell",
+    //  "command": "./scripts/deploy/dev/windows/device/status.sh",
+    //  "group": "build",
+    //  "presentation": {
+    //    "reveal": "always",
+    //    "panel": "new"
+    //  }
+    //},
+
+    // -------------------------------------------------------------------------------
+    // Tutorial
+    // -------------------------------------------------------------------------------
+    {
+      "label": "Tutorial - Symfony Framework",
+      "type": "shell",
+      "command": "./tools/tutorial/symfony.sh",
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}

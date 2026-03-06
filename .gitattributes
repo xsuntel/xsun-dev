@@ -1,0 +1,6 @@
+# Platform
+* text=auto eol=lf
+
+# Files
+*.png binary
+*.jpg binary
