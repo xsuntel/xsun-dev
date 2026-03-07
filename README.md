@@ -22,35 +22,34 @@ This project includes some shell-scripts for Full-Stack developer to develop a w
 ## Project
 
 ```text
-    api/
-    app/
-
-        | -- PHP - Symfony Framework -- |
-
-    diagram/
-        base/
-        console/
-        containers/
-        deploy/
-    scripts/
-        base/
-        console/
-        containers/
-        deploy/
-    tools/
-        ai/
-        ide/
-        tutorial.sh
-    .env.base
-    .env.dev
-    .env.dev.local
-    .env.prod
-    .env.prod.local
-    .gitattributes
-    .gitignore
-    .shellcheckrc
-    LICENSE
-    README.md
+.
+├── api/
+├── app/
+│                   <-- PHP - Symfony Framework -- >
+├── diagram/
+│   ├── base/
+│   ├── console/
+│   ├── containers/
+│   └── deploy/
+├── scripts/
+│   ├── base/
+│   ├── console/
+│   ├── containers/
+│   └── deploy/
+├── tools/
+│   ├── ai/
+│   ├── ide/
+│   └── tutorial.sh
+├── .env.base
+├── .env.dev
+├── .env.dev.local
+├── .env.prod
+├── .env.prod.local
+├── .gitattributes
+├── .gitignore
+├── .shellcheckrc
+├── LICENSE
+└── README.md
 ```
 
 ### Dev Environment
@@ -62,7 +61,9 @@ This project includes some shell-scripts for Full-Stack developer to develop a w
   ```bash
   git config --global user.name "{Your Name}"
   git config --global user.email "{Your Email}"
+  ```
 
+  ```bash
   git config --global init.defaultBranch main
   git config --global credential.helper store
 
@@ -94,7 +95,7 @@ This project includes some shell-scripts for Full-Stack developer to develop a w
   * [TimeZone](https://www.php.net/manual/en/timezones.php)
   * [Symfony Releases](https://symfony.com/releases)
 
-  ```bash
+  ```text
   vi env.app
 
   # >>>> Platform
