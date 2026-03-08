@@ -1,0 +1,57 @@
+# ======================================================================================================================
+# Scripts - Deploy - Dev Environment - Symfony Local Server    https://symfony.com/doc/current/setup/symfony_server.html
+# ======================================================================================================================
+
+# >>>> Proxy
+
+#proxy:
+#  domains:
+#    - domain1
+#    - domain2
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Local Web Server                                                                            PATH : "${PROJECT_PATH}"/app
+# ----------------------------------------------------------------------------------------------------------------------
+
+http:
+  document_root: public/
+  passthru: index.php
+  port: 8000
+  preferred_port: 8001
+  #p12: ~/.symfony5/certs/default.p12
+  allow_http: true # Prevent auto-redirection from HTTP to HTTPS
+  no_tls: true # Use HTTP instead of HTTPS
+  daemon: true # Run the server in the background
+  use_gzip: true # Toggle GZIP compression
+  no_workers: true # Do not start workers
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Workers
+# ----------------------------------------------------------------------------------------------------------------------
+
+workers:
+  # >>>> TailwindBundle
+#tailwind:
+#  cmd: [ 'symfony', 'console', 'tailwind:build', '--watch' ]
+
+  # >>>> Messenger
+#messenger_consume_async:
+#  cmd: [ 'symfony', 'console', 'messenger:consume', '--all' ]
+#  watch: ['config', 'src', 'templates']
+
+  # built-in command that builds and watches front-end assets
+  # npm_encore_watch:
+  #     cmd: ['npx', 'encore', 'dev', '--watch']
+  #npm_encore_watch: ~
+
+  # built-in command that starts messenger consumer
+  # messenger_consume_async:
+  #     cmd: ['symfony', 'console', 'messenger:consume', 'async']
+  #     watch: ['config', 'src', 'templates', 'vendor']
+
+  # you can also add your own custom commands
+  #build_spa:
+  #  cmd: ['npm', '--cwd', './spa/', 'dev']
+
+  # auto start Docker compose when starting server (available since Symfony CLI 5.7.0)
+  #docker_compose: ~

@@ -1,0 +1,182 @@
+{
+  // ======================================================================
+  // VSCode - Core Editor & Formatting
+  // ======================================================================
+
+  // >>>> Base
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "selection",
+  "editor.wordWrap": "on",
+
+  // >>>> Fonts
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'Ubuntu Mono', 'NanumGothicCoding', monospace",
+
+  // >>>> Guides
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.bracketPairColorization.enabled": true,
+
+  // >>>> Formetter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+  },
+
+  // >>>> Files
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ----------------------------------------------------------------------
+  // App - CSS
+  // ----------------------------------------------------------------------
+
+  // >>>> Tailwind CSS
+  "tailwindCSS.includeLanguages": {
+    "twig": "html",
+    "php": "html"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "class:list",
+    "attributes"
+  ],
+
+  // ----------------------------------------------------------------------
+  // App - HTML
+  // ----------------------------------------------------------------------
+
+  // >>>> Base
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  // >>>> Emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "twig": "html",
+    "postgresql": "sql"
+  },
+
+  // ----------------------------------------------------------------------
+  // App - PHP - Symfony Framework
+  // ----------------------------------------------------------------------
+
+  // >>>> Base
+  "php.validate.executablePath": "/usr/bin/php",
+  "php.suggest.basic": false,
+
+  "files.associations": {
+    "*.html.twig": "twig",
+    "*.env": "properties",
+    "*.env.local": "properties"
+  },
+  "files.watcherExclude": {
+    "**/var/cache/**": true,
+    "**/var/log/**": true,
+    "**/vendor/**": true,
+    "**/.git/objects/**": true
+  },
+  "files.exclude": {
+    "**/var/cache/**": true,
+    "**/var/log/**": true,
+    "**/vendor/**": true,
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/var/cache": true
+  }
+
+  // ----------------------------------------------------------------------
+  // Cache (Redis)
+  // ----------------------------------------------------------------------
+
+  // >>>> Base
+
+  // ----------------------------------------------------------------------
+  // Database (PostgreSQL)
+  // ----------------------------------------------------------------------
+
+  // >>>> Base
+  "sqltools.useNodeRuntime": true,
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.background": "#404040",
+    "editorIndentGuide.activeBackground": "#ffffff"
+  },
+
+  // ----------------------------------------------------------------------
+  // CDN ( Content Delivery Networks )
+  // ----------------------------------------------------------------------
+
+
+  // ----------------------------------------------------------------------
+  // Docker - Containers
+  // ----------------------------------------------------------------------
+
+
+  // ----------------------------------------------------------------------
+  // Providers ( Cloud Service Provider )
+  // ----------------------------------------------------------------------
+
+
+  // ----------------------------------------------------------------------
+  // Utility
+  // ----------------------------------------------------------------------
+
+  // >>>> Icon Theme
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "nest",
+
+  // >>>> Files
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "composer.json": "composer.lock, symfony.lock",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    ".env": ".env.*",
+    "*.ts": "${capture}.js"
+  },
+
+  // >>>> Formatter
+  "[shellscript]": {
+      "editor.tabSize": 4,
+      "editor.insertSpaces": true,
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+
+  // >>>> Keyboard
+  {
+    "editor.imeSupport": "on",
+    "terminal.integrated.gpuAcceleration": "on",
+    "window.titleBarStyle": "custom"
+  },
+
+  // >>>> Terminal
+  {
+    "terminal.integrated.scrollback": 10000
+  },
+
+  // >>>> GitLens
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": true,
+  "gitlens.mode.statusBar.enabled": true,
+  "gitlens.graph.layout": "panel",
+}
