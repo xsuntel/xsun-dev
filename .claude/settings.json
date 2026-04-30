@@ -1,0 +1,6 @@
+{
+    "env": {
+        "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "4096",
+        "MAX_MCP_OUTPUT_TOKENS": "25000"
+    }
+}

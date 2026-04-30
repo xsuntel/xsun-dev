@@ -1,0 +1,46 @@
+# ======================================================================================================================
+# Scripts - Deploy - Dev Environment - Symfony Local Server    https://symfony.com/doc/current/setup/symfony_server.html
+# ======================================================================================================================
+
+# >>>> Proxy
+
+#proxy:
+#  domains:
+#    - domain1
+#    - domain2
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Local Web Server                                                                          PATH : "${PROJECT_PATH}"/app
+# ----------------------------------------------------------------------------------------------------------------------
+
+http:
+  document_root: public/
+  passthru: index.php
+  port: 8000
+  preferred_port: 8001
+  #p12: ~/.config/symfony-cli/certs/default.p12
+  allow_http: true # Prevent auto-redirection from HTTP to HTTPS
+  no_tls: true # Use HTTP instead of HTTPS
+  daemon: true # Run the server in the background
+  use_gzip: true # Toggle GZIP compression
+  no_workers: true # Do not start workers
+
+# ----------------------------------------------------------------------------------------------------------------------
+# Workers
+# ----------------------------------------------------------------------------------------------------------------------
+
+workers:
+  # >>>> Built-in Encore integration
+  #npm_encore_watch: ~
+
+  # >>>> Messenger consumer with file watching
+  #messenger_consume_async:
+  #    cmd: ['symfony', 'console', 'messenger:consume', 'async']
+  #    watch: ['config', 'src', 'templates', 'vendor/composer/installed.json']
+
+  # >>>> Custom commands
+  #build_spa:
+  #    cmd: ['npm', 'run', 'watch']
+
+  # >>>> Auto-start Docker Compose
+  #docker_compose: ~

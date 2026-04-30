@@ -1,0 +1,123 @@
+{
+  "experimental": {
+    "extensionReloading": true,
+    "modelSteering": true,
+    "memoryManager": true
+  },
+  "general": {
+    "devtools": true,
+    "vimMode": false,
+    "preferredEditor": "code",
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "30d",
+      "maxCount": 100
+    }
+  },
+  "ui": {
+    "theme": "GitHub",
+    "hideBanner": true,
+    "hideTips": false,
+    "customWittyPhrases": [
+      "You forget a thousand things every day. Make sure this is one of ’em",
+      "Connecting to AGI"
+    ]
+  },
+  "tools": {
+    "sandbox": "docker",
+    "discoveryCommand": "bin/get_tools",
+    "callCommand": "bin/call_tool"
+  },
+  "mcpServers": {
+    "mcp-server-redis": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-redis",
+        "redis://127.0.0.1:6379"
+      ]
+    },
+    "mcp-server-postgres": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://symfony:!ChangeMe!@127.0.0.1:5432/abstract?serverVersion=16&charset=utf8"
+      ]
+    },
+    "docker-mcp": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/var/run/docker.sock:/var/run/docker.sock",
+        "mcp/docker"
+      ]
+    },
+    "github-mcp-server": {
+      "type": "stdio",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-pat"
+      }
+    }
+  },
+  "telemetry": {
+    "enabled": true,
+    "target": "local",
+    "otlpEndpoint": "http://localhost:4317",
+    "logPrompts": true
+  },
+  "model": {
+    "name": "gemini-1.5-pro-latest",
+    "maxSessionTurns": 10,
+    "summarizeToolOutput": {
+      "run_shell_command": {
+        "tokenBudget": 100
+      }
+    }
+  },
+  "context": {
+    "fileName": ["GEMINI.md", "_ABSTRACT.md"],
+    "includeDirectories": ["app", "scripts"],
+    "loadFromIncludeDirectories": true,
+    "fileFiltering": {
+      "respectGitIgnore": true
+    }
+  },
+  "advanced": {
+    "excludedEnvVars": [
+      "DEBUG",
+      "DEBUG_MODE",
+      "NODE_ENV",
+      "APP_ENV",
+      "APP_DEBUG"
+    ]
+  },
+  "security": {
+    "allowedEnvironmentVariables": [],
+    "blockedEnvironmentVariables": [
+      "INTERNAL_IP_ADDRESS",
+      "APP_SECRET",
+      "DATABASE_URL",
+      "RABBITMQ_PASSWORD",
+      "GITHUB_PERSONAL_ACCESS_TOKEN"
+    ]
+  },
+  "privacy": {
+    "usageStatisticsEnabled": false
+  }
+}

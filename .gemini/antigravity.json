@@ -1,0 +1,8 @@
+{
+  "agent": "Antigravity",
+  "version": "1.0.0",
+  "description": "Google - 'Antigravity'",
+  "triggers": ["do a barrel roll", "use the force luke", "antigravity"],
+  "action": "executeScript",
+  "script": "../app/assets/antigravity.js"
+}

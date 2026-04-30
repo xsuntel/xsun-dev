@@ -1,0 +1,384 @@
+{
+  // ======================================================================
+  // VSCode - Core Editor & Formatting
+  // ======================================================================
+
+  // >>>> Base
+  "editor.tabSize": 4,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.renderWhitespace": "selection",
+  "editor.wordWrap": "on",
+
+  // >>>> Fonts
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "'Ubuntu Mono', 'NanumGothicCoding', monospace",
+  "editor.letterSpacing": 0,
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+
+  // >>>> Guides
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": "active",
+  "editor.bracketPairColorization.enabled": true,
+
+  // >>>> Formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true
+  },
+  "[twig]": {
+    "editor.defaultFormatter": "mblode.twig-language-2",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.wordWrap": "on"
+  },
+  "[sql]": {
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true
+  },
+  "[nginx]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": false
+  },
+  "[dotenv]": {
+    "editor.formatOnSave": false
+  },
+
+  // >>>> Performance & UX
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.scrollback": 10000,
+  "terminal.integrated.fontSize": 13,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": true,
+  "editor.minimap.maxColumn": 120,
+  "editor.rulers": [120],
+  "editor.stickyScroll.enabled": true,
+
+  // >>>> Files
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+
+  // >>>> Git
+  "git.autorefresh": true,
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+
+  // ======================================================================
+  // App - CSS (Tailwind CSS)
+  // ======================================================================
+  "tailwindCSS.includeLanguages": {
+    "twig": "html",
+    "php": "html"
+  },
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "class:list",
+    "attributes"
+  ],
+
+  // ======================================================================
+  // App - HTML / Emmet
+  // ======================================================================
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "twig": "html",
+    "postgresql": "sql",
+    "pgsql": "sql"
+  },
+
+  // ======================================================================
+  // App - PHP / Symfony Framework
+  // ======================================================================
+  "php.validate.executablePath": "/usr/bin/php",
+  "php.validate.enable": false,
+  "php.suggest.basic": false,
+
+  // PHP CS Fixer (Symfony 코딩 표준 적용)
+  "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+  "php-cs-fixer.onsave": true,
+  "php-cs-fixer.rules": "@Symfony",
+  "php-cs-fixer.allowRisky": true,
+  "php-cs-fixer.config": ".php-cs-fixer.php",
+  "php-cs-fixer.autoFixByBracket": true,
+
+  // PHPStan (정적 분석)
+  "phpstan.enabled": true,
+  "phpstan.level": "6",
+  "phpstan.configFile": "phpstan.neon",
+  "phpstan.memoryLimit": "256M",
+
+  // Symfony Console / Routes 자동완성
+  "symfony.consolePath": "bin/console",
+
+  // ======================================================================
+  // App - Intelephense (PHP Language Server)
+  // ======================================================================
+  "intelephense.environment.phpVersion": "8.4",
+  "intelephense.environment.includePaths": [
+    "./app/src",
+    "./app/vendor",
+    "./app/var"
+  ],
+  "intelephense.files.exclude": [
+    "**/.git/**",
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/var/cache/**",
+    "**/var/log/**"
+  ],
+  "intelephense.diagnostics.enable": true,
+  "intelephense.diagnostics.undefinedTypes": true,
+  "intelephense.diagnostics.undefinedFunctions": true,
+  "intelephense.diagnostics.undefinedConstants": true,
+  "intelephense.diagnostics.undefinedClassConstants": true,
+  "intelephense.diagnostics.undefinedMethods": true,
+  "intelephense.diagnostics.undefinedProperties": true,
+  "intelephense.diagnostics.undefinedVariables": true,
+  "intelephense.diagnostics.unusedSymbols": true, // 추가: 미사용 심볼 감지
+  "intelephense.diagnostics.typeErrors": true, // 추가: 타입 오류 감지
+  "intelephense.files.maxSize": 5000000,
+  "intelephense.phpdoc.returnVoid": false,
+  "intelephense.phpdoc.useFullyQualifiedNames": false,
+  "intelephense.format.enable": true,
+  "intelephense.completion.insertUseDeclaration": true, // 추가: use 자동 삽입
+  "intelephense.completion.fullyQualifyGlobalConstantsAndFunctions": false,
+  "intelephense.references.exclude": [
+    "**/var/cache/**",
+    "**/vendor/symfony/cache/**"
+  ],
+  "intelephense.stubs": [
+    "bcmath",
+    "bz2",
+    "calendar",
+    "com_dotnet",
+    "Core",
+    "ctype",
+    "curl",
+    "date",
+    "dom",
+    "enchant",
+    "exif",
+    "fileinfo",
+    "filter",
+    "fpm",
+    "ftp",
+    "gd",
+    "gettext",
+    "gmp",
+    "hash",
+    "iconv",
+    "imap",
+    "intl",
+    "json",
+    "ldap",
+    "libxml",
+    "mbstring",
+    "mcrypt",
+    "oci8",
+    "odbc",
+    "openssl",
+    "pcntl",
+    "pcre",
+    "PDO",
+    "pdo_pgsql",
+    "pgsql",
+    "Phar",
+    "posix",
+    "pspell",
+    "readline",
+    "recode",
+    "Reflection",
+    "regex",
+    "session",
+    "shmop",
+    "SimpleXML",
+    "snmp",
+    "soap",
+    "sockets",
+    "sodium",
+    "SPL",
+    "sqlite3",
+    "standard",
+    "superglobals",
+    "sysvmsg",
+    "sysvsem",
+    "sysvshm",
+    "tidy",
+    "tokenizer",
+    "xml",
+    "xmlreader",
+    "xmlrpc",
+    "xmlwriter",
+    "xsl",
+    "Zend OPcache",
+    "zip",
+    "zlib",
+    "redis",
+    "apcu" // 추가: APCu 캐시 스텁
+  ],
+
+  // ======================================================================
+  // App - PostgreSQL
+  // ======================================================================
+
+  // SQLTools 설정 (mtxr.sqltools 확장 필요)
+  "sqltools.connections": [
+    {
+      "name": "Local PostgreSQL",
+      "driver": "PostgreSQL",
+      "server": "localhost",
+      "port": 5432,
+      "database": "${env:POSTGRES_DB}",
+      "username": "${env:POSTGRES_USER}",
+      "password": "${env:POSTGRES_PASSWORD}",
+      "useSSL": false,
+      "previewLimit": 50
+    }
+  ],
+  "sqltools.autoOpenSessionFiles": false,
+  "sqltools.results.limit": 200,
+  "sqltools.format": {
+    "language": "sql",
+    "tabSize": 2
+  },
+
+  // ======================================================================
+  // App - Redis
+  // ======================================================================
+
+  // Redis 파일 연결 (Redis for VSCode 확장 또는 cweijan.vscode-redis-client)
+  "redis.connections": [
+    {
+      "name": "Local Redis",
+      "host": "127.0.0.1",
+      "port": 6379,
+      "password": "",
+      "db": 0
+    }
+  ],
+
+  // ======================================================================
+  // App - Nginx
+  // ======================================================================
+
+  // Nginx 설정 파일 연결 (shanoor.vscode-nginx 확장 필요)
+  "files.associations": {
+    "*.html.twig": "twig",
+    "*.php": "php",
+    "*.env": "properties",
+    "*.env.local": "properties",
+    "*.env.dev": "properties",
+    "*.env.dev.local": "properties",
+    "*.env.prod": "properties",
+    "*.env.prod.local": "properties",
+    "nginx.conf": "nginx",
+    "*.nginx": "nginx",
+    "*.conf": "nginx",
+    "**/nginx/**/*.conf": "nginx",
+    "**/sites-available/*": "nginx",
+    "**/sites-enabled/*": "nginx",
+    "*.sql": "sql",
+    "*.pgsql": "sql",
+    "docker-compose*.yml": "yaml",
+    "Makefile": "makefile"
+  },
+
+  // ======================================================================
+  // File System - Exclusions & Watchers
+  // ======================================================================
+  "files.watcherExclude": {
+    "**/var/cache/**": true,
+    "**/var/log/**": true,
+    "**/vendor/**": true,
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true
+  },
+  "files.exclude": {
+    "**/var/cache/**": true,
+    "**/var/log/**": true,
+    "**/vendor/**": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/vendor": true,
+    "**/var/cache": true,
+    "**/var/log": true,
+    "**/*.min.js": true,
+    "**/*.min.css": true
+  },
+
+  // ======================================================================
+  // UI & Workbench
+  // ======================================================================
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.activeIconPack": "nest",
+  "workbench.colorCustomizations": {},
+  "workbench.editor.enablePreview": false,
+  "workbench.editor.showTabs": "multiple",
+
+  // ======================================================================
+  // Explorer - File Nesting
+  // ======================================================================
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "composer.json": "composer.lock, symfony.lock, .php-cs-fixer.php, phpstan.neon, phpunit.xml, phpunit.xml.dist",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, .npmrc, .nvmrc",
+    ".env": ".env.*, .env.local, .env.test, .env.dev, .env.prod",
+    "docker-compose.yml": "docker-compose.*.yml, .dockerignore, Dockerfile*",
+    "*.ts": "${capture}.js, ${capture}.d.ts, ${capture}.js.map",
+    "*.php": "${capture}.phpt",
+    "nginx.conf": "*.conf",
+    "Makefile": "*.mk"
+  },
+
+  // ======================================================================
+  // Shell Script
+  // ======================================================================
+  "[shellscript]": {
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}
