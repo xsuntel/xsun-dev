@@ -1,0 +1,31 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "codegyan.auto-closing-tags",
+    "dbaeumer.vscode-eslint",
+    "marcoroth.stimulus-lsp",
+    "bmewburn.vscode-intelephense-client",
+    "xdebug.php-debug",
+    "splashmich.symfony-vscode-fixed",
+    "mblode.twig-language-2",
+    "sanderverschoor.symfony-ux-twig-component",
+    "redis.redis-for-vscode",
+    "ms-ossdata.vscode-pgsql",
+    "ms-azuretools.vscode-containers",
+    "ms-azuretools.vscode-docker",
+    "hediet.vscode-drawio",
+    "github.vscode-pull-request-github",
+    "github.github-vscode-theme",
+    "donjayamanne.githistory",
+    "github.github-vscode-theme",
+    "anthropic.claude-code",
+    "dotenv.dotenv-vscode",
+    "foxundermoon.shell-format",
+    "timonwong.shellcheck",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "esbenp.prettier-vscode",
+    "davidanson.vscode-markdownlint",
+    "pkief.material-icon-theme"
+  ]
+}

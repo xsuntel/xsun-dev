@@ -1,0 +1,91 @@
+{
+  "model": "claude-sonnet-4-6",
+  "availableModels": ["claude-sonnet-4-6", "opus"],
+  "env": {
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-6",
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "8192",
+    "MAX_MCP_OUTPUT_TOKENS": "25000",
+    "DISABLE_TELEMETRY": "1",
+    "DISABLE_ERROR_REPORTING": "1"
+  },
+  "permissions": {
+    "defaultMode": "plan",
+    "allow": [
+      "Edit(app/assets/**/*)",
+      "Edit(app/config/**/*)",
+      "Edit(app/public/**/*)",
+      "Edit(app/src/**/*)",
+      "Edit(app/templates/**/*)",
+      "Edit(app/migrations/**/*)",
+      "Edit(app/tests/**/*)",
+      "Edit(app/translations/**/*)",
+      "Bash(app/vendor/bin/*:*)",
+      "Edit(diagram/**/*)",
+      "Edit(scripts/**/*)",
+      "Bash(php:*)",
+      "Bash(composer:*)",
+      "Bash(git:*)"
+    ],
+    "deny": [
+      "Edit(.gemini/**/*)",
+      "Read(.gemini/**/*)",
+      "Edit(.github/**/*)",
+      "Read(.github/**/*)",
+      "Edit(.vscode/**/*)",
+      "Edit(app/secrets/**/*)",
+      "Read(app/secrets/**/*)",
+      "Edit(app/.env)",
+      "Read(app/.env)",
+      "Edit(app/.env.dev)",
+      "Read(app/.env.dev)",
+      "Edit(app/.env.prod)",
+      "Read(app/.env.prod)",
+      "Edit(.env.app)",
+      "Read(.env.app)",
+      "Read(.env.dev)",
+      "Read(.env.prod)",
+      "Read(tools/**/*)",
+      "Edit(.gitignore)",
+      "Edit(app/config/jwt/**/*)",
+      "Read(app/config/jwt/**/*)",
+      "Edit(app/config/secrets/**/*)",
+      "Read(app/config/secrets/**/*)",
+      "Edit(app/auth.json)",
+      "Read(app/auth.json)",
+      "Read(.mcp.json)",
+      "Edit(.mcp.json)",
+      "Read(**/*.pem)",
+      "Read(**/*.p12)",
+      "Read(**/*.pfx)",
+      "Bash(sudo:*)",
+      "Bash(rm:*)",
+      "Bash(dd:*)",
+      "Bash(shred:*)",
+      "Bash(mkfs:*)",
+      "Bash(fdisk:*)",
+      "Bash(nc:*)",
+      "Bash(ncat:*)",
+      "Bash(useradd:*)",
+      "Bash(userdel:*)",
+      "Bash(passwd:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pw-play /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null || aplay /usr/share/sounds/alsa/Front_Center.wav 2>/dev/null || true",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "cleanupPeriodDays": 30,
+  "autoUpdatesChannel": "stable",
+  "outputStyle": "explanatory"
+}
